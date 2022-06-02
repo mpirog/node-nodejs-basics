@@ -1,10 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { __dirname } from './custom-module.js';
 
 export const create = async () => {
   const data = 'I am fresh and young';

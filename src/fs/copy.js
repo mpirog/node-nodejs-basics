@@ -1,10 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { __filename, __dirname } from './custom-module.js';
 
 const sourceDirPath = path.resolve(__dirname, './files');
 const copyDirPath = path.resolve(__dirname, './files-copy');
