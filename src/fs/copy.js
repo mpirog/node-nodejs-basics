@@ -1,3 +1,61 @@
+import fs from 'fs/promises';
+import path from 'path';
+
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const sourceDirPath = path.resolve(__dirname, './files');
+const copyDirPath = path.resolve(__dirname, './files-copy');
+
+const makeDirectory = async () => {
+  try {
+    const statCopy = await fs.stat(copyDirPath);
+
+    if (statCopy.isDirectory()) {
+      const err = new Error('FS operation failed');
+      err.code = 'FS_CUSTOM_ERR';
+      throw err;
+    }
+  } catch (err) {
+    if (err.code === 'FS_CUSTOM_ERR') {
+      throw err;
+    }
+
+    await fs.mkdir(copyDirPath);
+  }
+};
+
+const readDirectory = async () => {
+  const fiels = await fs.readdir(sourceDirPath);
+  return fiels;
+};
+
+const copyFile = async (fileName) => {
+  const currentPath = `${sourceDirPath}/${fileName}`;
+  const newPath = `${copyDirPath}/${fileName}`;
+
+  await fs.copyFile(currentPath, newPath);
+};
+
+//----------------------------------
 export const copy = async () => {
-    // Write your code here 
+  try {
+    const statSouerce = await fs.stat(sourceDirPath);
+
+    if (!statSouerce.isDirectory) {
+      throw new Error('FS operation failed');
+    }
+
+    await makeDirectory();
+
+    [...await readDirectory()].forEach(async (fileName) => {
+      await copyFile(fileName);
+    });
+  } catch (err) {
+    if (err) {
+      throw new Error('FS operation failed');
+    }
+  }
 };
