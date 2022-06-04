@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { __dirname } from './custom-module.js';
+import { __dirname } from '../path.module.js';
 
-const sourceDirPath = path.resolve(__dirname, './files');
+const sourceDirPath = path.resolve(__dirname, './fs/files');
 
 const readDirectory = async () => {
   const fiels = await fs.readdir(sourceDirPath);

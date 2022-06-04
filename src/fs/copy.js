@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { __filename, __dirname } from './custom-module.js';
+import { __filename, __dirname } from '../path.module.js';
 
-const sourceDirPath = path.resolve(__dirname, './files');
-const copyDirPath = path.resolve(__dirname, './files-copy');
+const sourceDirPath = path.resolve(__dirname, './fs/files');
+const copyDirPath = path.resolve(__dirname, './fs/files-copy');
 
 const makeDirectory = async () => {
   try {

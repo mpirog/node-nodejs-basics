@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { __dirname } from './custom-module.js';
+import { __dirname } from '../path.module.js';
 
-const sourceFilePath = path.resolve(__dirname, './files/fileToRead.txt');
+const sourceFilePath = path.resolve(__dirname, './fs/files/fileToRead.txt');
 
 export const read = async () => {
   try {
