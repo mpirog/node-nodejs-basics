@@ -20,7 +20,8 @@
 
     "hash": "node ./src/hash/index",
     
-    "sreams:read": "node ./src/streams/index --read"
+    "sreams:read": "node ./src/streams/index --read",
+    "sreams:write": "node ./src/streams/index --write"
   },
   "repository": {
     "type": "git",
