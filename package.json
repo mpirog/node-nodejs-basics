@@ -21,7 +21,8 @@
     "hash": "node ./src/hash/index",
     
     "sreams:read": "node ./src/streams/index --read",
-    "sreams:write": "node ./src/streams/index --write"
+    "sreams:write": "node ./src/streams/index --write",
+    "sreams:transform": "node ./src/streams/index --transform"
   },
   "repository": {
     "type": "git",
