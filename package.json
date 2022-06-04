@@ -22,7 +22,10 @@
     
     "sreams:read": "node ./src/streams/index --read",
     "sreams:write": "node ./src/streams/index --write",
-    "sreams:transform": "node ./src/streams/index --transform"
+    "sreams:transform": "node ./src/streams/index --transform",
+
+    "zip:compress": "node ./src/zip/index --compress",
+    "zip:decompress": "node ./src/zip/index --decompress"
   },
   "repository": {
     "type": "git",
