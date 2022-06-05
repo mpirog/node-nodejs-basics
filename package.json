@@ -27,7 +27,9 @@
     "zip:compress": "node ./src/zip/index --compress",
     "zip:decompress": "node ./src/zip/index --decompress",
 
-    "wt": "node ./src/wt/index"
+    "wt": "node ./src/wt/index",
+
+    "cp": "node ./src/cp/index"
   },
   "repository": {
     "type": "git",
