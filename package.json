@@ -25,7 +25,9 @@
     "sreams:transform": "node ./src/streams/index --transform",
 
     "zip:compress": "node ./src/zip/index --compress",
-    "zip:decompress": "node ./src/zip/index --decompress"
+    "zip:decompress": "node ./src/zip/index --decompress",
+
+    "wt": "node ./src/wt/index"
   },
   "repository": {
     "type": "git",
