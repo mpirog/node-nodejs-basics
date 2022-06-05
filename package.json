@@ -4,17 +4,49 @@
   "description": "This repository is the part of nodejs-assignments https://github.com/AlreadyBored/nodejs-assignments",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "fs:create": "node ./src/fs/index --create",
+    "fs:copy": "node ./src/fs/index --copy",
+    "fs:rename": "node ./src/fs/index --rename",
+    "fs:remove": "node ./src/fs/index --remove",
+    "fs:list": "node ./src/fs/index --list",
+    "fs:read": "node ./src/fs/index --read",
+    
+    "cli:args": "node ./src/cli/index args --arg 10 --arg2 'string-arg'",
+    "cli:env": "cross-env RSS_DATA=value1 RSS_TTTT='value2' node ./src/cli/index env",
+
+    "modules": " node ./src/modules/index",
+
+    "hash": "node ./src/hash/index",
+    
+    "sreams:read": "node ./src/streams/index --read",
+    "sreams:write": "node ./src/streams/index --write",
+    "sreams:transform": "node ./src/streams/index --transform",
+
+    "zip:compress": "node ./src/zip/index --compress",
+    "zip:decompress": "node ./src/zip/index --decompress",
+
+    "wt": "node ./src/wt/index",
+
+    "cp": "node ./src/cp/index"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlreadyBored/node-nodejs-basics.git"
   },
-  "keywords": ["nodejs", "assignments", "alreadybored"],
+  "keywords": [
+    "nodejs",
+    "assignments",
+    "alreadybored"
+  ],
   "author": "alreadybored",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AlreadyBored/node-nodejs-basics/issues"
   },
-  "homepage": "https://github.com/AlreadyBored/node-nodejs-basics#readme"
+  "homepage": "https://github.com/AlreadyBored/node-nodejs-basics#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
